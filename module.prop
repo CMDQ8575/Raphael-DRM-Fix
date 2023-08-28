@@ -1,0 +1,6 @@
+id=raphael_drm_fix
+name=Widevine L1 Fix for Raphael CN
+version=1.0
+versionCode=1
+author=PureQing
+description=Add Widevine L1 Support
