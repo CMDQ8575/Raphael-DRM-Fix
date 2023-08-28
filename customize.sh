@@ -6,10 +6,9 @@ for CFG in $array
 do
     [[ -f $CFG ]] && [[ ! -L $CFG ]] && {
     SELECTPATH=$CFG
-    mkdir -p `dirname $MODPATH$CFG`
+    mkdir -p `dirname $MODPATH/system$CFG`
     ui_print "- Modifying $SELECTPATH"
     cp -af $SELECTPATH $MODPATH/system$SELECTPATH
-    ui_print "- Starting modifiy"
     sed -i 's|<integer name="support_widevine_l1">1</integer>|<integer name="support_widevine_l1">2</integer>|g' $MODPATH/system$SELECTPATH
     }
 done
